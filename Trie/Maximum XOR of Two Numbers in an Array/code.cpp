@@ -34,7 +34,7 @@ public:
         TrieNode* node = root;
         int mx = 0;
         for(int i = 31; i >= 0; --i) {
-            int bit = (num >> 1) & 1;
+            int bit = (num >> i) & 1;
             int op = 1 - bit;
             if(node->children[op]) {
                 mx |= (1 << i);
